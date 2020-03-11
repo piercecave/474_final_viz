@@ -2,15 +2,56 @@
 
 <head>
     <title>474 Final Visualization</title>
+    <style>
+        div.tooltip {
+            position: absolute;
+            opacity: 0;
+        }
+
+        table {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        .color-box {
+            float: left;
+            width: 12px;
+            height: 12px;
+            border: 1px solid rgba(0, 0, 0, .2);
+            margin-right: .25rem;
+            margin-top: 2px;
+        }
+
+        h4 {
+            margin: .5rem 0;
+        }
+    </style>
     <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="index.js"></script>
 </head>
 
 <body>
-    <div style="border: 1px solid black; display: inline-block; padding: .5rem;">
-        <h3 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">NY Motor Vehicle Crash Visualization</h3>
-        <div id="vizContainer" style="border: 1px solid black;"></div>
-    </div>
+    <table>
+        <tr>
+            <td colspan="2">
+                <h3 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">
+                    NY Motor Vehicle Crash Visualization
+                </h3>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="vizContainer" style="border: 1px solid black;"></div>
+            </td>
+            <td>
+                <h4>Contributing Factor:</h4>
+                <select id="factorSelect">
+                    <option value="All" selected>All</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+
+    <script src="index.js"></script>
 </body>
 
 </html>
